@@ -6,18 +6,19 @@ function randomNum(min, max) {
 };
 
 
-// un ciclo for che fa generare 5 numer casualemnte con l'utilizzo della funzione randomNum
+// un ciclo for che fa generare 5 numer casualemnte con l'utilizzo della funzione randomNum ed esegue tutto il programmino
+
 for ( let i=1; i<=5; i++){
     let randomazier =randomNum(1, 100);
     let numerBox = document.querySelector('.display');
-    numerBox.innerHTML += `<div class="margin"><h1 class="center">${randomazier}</h1></div>`;
+    numerBox.innerHTML += `<div class="margin mt-5"><h1 class="center">${randomazier}</h1></div>`;
     let remembered = document.querySelector('.risultati');
-
+    //timeout che fa sparire i numeri
     setTimeout(function() {
         numerBox.remove();
-    }, 3000);
+    }, 30000);
 
-
+    //escuzione prompt 
     setTimeout(function () {
         let userPromtp;
         do{
@@ -26,13 +27,21 @@ for ( let i=1; i<=5; i++){
         while (isNaN(userPromtp));
         console.log(userPromtp);
 
-        if(randomazier === userPromtp){
-            remembered.innerHTML += `<div class="result-margin"><h1 class="center"> Il numero ${randomazier} e stato riccordato</h1></div>`;
+        if(randomazier == userPromtp){
+            remembered.innerHTML += `                    
+            <div class="result-margin p-4">
+                <p class=""> Il numero: ${randomazier} e corretto</p> 
+            </div>`;
         }
         else{
-            remembered.innerHTML += `<div class="result-margin"><h1 class="center"> Tu inserire: ${userPromtp}. Ma numero essere ${randomazier}</h1></div>`;
+            remembered.innerHTML += `
+            <div class="result-margin p-4">
+                <p class=""> Tu inserire: ${userPromtp}.</p> 
+                <p class=""> Ma numero essere: ${randomazier}</p>
+            </div>
+            `;
         }
 
-    }, 3020);
+    }, 30020);
 
 };

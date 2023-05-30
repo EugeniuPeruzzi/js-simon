@@ -4,14 +4,17 @@
     box-sizing: border-box;
 }
 
-.d-flex{
-    display: flex;
-    justify-content: center;
-    margin: 100px;
+.color{
+    color: white;
+}
+
+
+body{
+    background-color: teal;
 }
 
 .margin{
-    margin: 75px;
+    border-radius: 50px;
     height: 100px;
     width: 100px;
     background-color: wheat;
@@ -19,8 +22,11 @@
 }
 
 .result-margin{
+    border-radius: 50px;
+    height: 150px;
+    width: 220px;
     margin: 75px;
-    background-color: lightblue;
+    background-color: wheat;
     position: relative;
 }
 
