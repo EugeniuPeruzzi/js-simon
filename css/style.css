@@ -18,6 +18,12 @@
     position: relative;
 }
 
+.result-margin{
+    margin: 75px;
+    background-color: lightblue;
+    position: relative;
+}
+
 .center{
     position: absolute;
     top: 50%;
